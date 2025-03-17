@@ -26,7 +26,7 @@ import net.javaguides.springboot.repository.GenericDaoImpl;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/")
 public class EmployeeController {
 
 	@Autowired
@@ -39,7 +39,24 @@ public class EmployeeController {
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
-	}		
+	}	
+	
+	// get all employees
+	@GetMapping("/test")
+	public Employee getTest(){
+		
+		Employee e1 = new Employee();
+		e1.setEmailId("test@gmail.com");
+		e1.setEmpDesignation("Analyst");
+		e1.setFirstName("Rohit");
+		e1.setLastName("Kurbetti");
+		e1.setId(1);
+		e1.setPhoneNumber(9876758865L);
+		e1.setEmpPrimaryIncome(true);
+		e1.setEmpSalary(65777L);
+		
+		return e1;
+	}	
 	
 	// create employee rest api
 	@PostMapping("/employees")
