@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.empmgmt.dto.EmployeeRequestDto;
+import com.example.empmgmt.entity.EmpDetails;
 import com.example.empmgmt.entity.Employee;
 import com.example.empmgmt.service.EmpService;
+
+import jakarta.transaction.Transactional;
 
 
 @RestController
@@ -47,8 +50,10 @@ public class EmpController {
     
     // Delete Employee
     @DeleteMapping("/employees/{id}")
+    @Transactional
     public String deleteEmployee(@PathVariable("id") Long id) {
     	empService.deleteEmployee(id);
+    	deleteEmployeeDetail(id);
     	return "Employee "+id+" has been deleted";
     }
 	
@@ -56,5 +61,27 @@ public class EmpController {
     public Employee updateEmployee(@PathVariable Long id, @RequestBody EmployeeRequestDto employee) {
         return empService.updateEmployee(id, employee);
     }
+    
+    
+    //***empDetails crud
+    
+    // Get EmployeeDetl by ID
+ 	@GetMapping("/employeeDetail/{id}")
+     public Optional<EmpDetails> getEmployeeDetailById(@PathVariable("id") Long id) {
+         return empService.getEmployeeDetailById(id);
+     }
+    
+    
+ 	// Delete EmployeeDetails by ID
+    @DeleteMapping("/employeeDetail/{id}")
+    public void deleteEmployeeDetail(@PathVariable("id") Long id) {
+    	empService.deleteEmployeeDetails(id);
+    }
+    
+    
+    
+    
+    
+    
 	
 }

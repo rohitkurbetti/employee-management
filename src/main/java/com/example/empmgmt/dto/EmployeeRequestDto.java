@@ -12,8 +12,11 @@ public class EmployeeRequestDto {
 	
 	private String name;
 	private String designation;
-	
-	
-	
-	
+	private String department;
+	private Long salary;
+	private String empAddress1;
+	private String empAddress2;
+	private Long annualIncome;
+	private String state;
+
 }

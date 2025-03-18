@@ -28,6 +28,9 @@ public class Employee {
 	@Column(name="emp_designation")
 	private String empDesignation;
 	
+	@Column(name="emp_department")
+	private String empDepartment;
+	
 	
 	
 }

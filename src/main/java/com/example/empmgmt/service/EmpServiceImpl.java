@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.empmgmt.dto.EmployeeRequestDto;
+import com.example.empmgmt.entity.EmpDetails;
 import com.example.empmgmt.entity.Employee;
+import com.example.empmgmt.repository.EmpDetailsRepository;
 import com.example.empmgmt.repository.EmpRepository;
 
 @Service
@@ -15,15 +17,32 @@ public class EmpServiceImpl implements EmpService {
 
 	@Autowired
 	private EmpRepository empRepo;
+	
+	@Autowired
+	private EmpDetailsRepository empDetailsRepo;
 
 	@Override
 	public Employee saveEmployee(EmployeeRequestDto entity) {
 		
+		//save employee
 		Employee empDom = new Employee();
 		empDom.setEmpDesignation(entity.getDesignation());
 		empDom.setEmpName(entity.getName());
+		empDom.setEmpDepartment(entity.getDepartment());
+		Employee empSaved = empRepo.save(empDom);
 		
-		return empRepo.save(empDom);
+		//save empDetails
+		EmpDetails empDetails = new EmpDetails();
+		empDetails.setEmpId(empSaved.getId());
+		empDetails.setEmpSalary(entity.getSalary());
+		empDetails.setEmpAddress1(entity.getEmpAddress1());
+		empDetails.setEmpAddress2(entity.getEmpAddress2());
+		empDetails.setEmpAnnualIncome(entity.getAnnualIncome());
+		empDetails.setEmpState(entity.getState());
+		
+		empDetailsRepo.save(empDetails);
+		
+		return empSaved;
 	}
 
 	@Override
@@ -53,6 +72,20 @@ public class EmpServiceImpl implements EmpService {
         }
         return empRepo.save(emp);
     }
+
+	@Override
+	public Optional<EmpDetails> getEmployeeDetailById(Long id) {
+		Optional<EmpDetails> empDetails = empDetailsRepo.findByEmpId(id);
+		if(empDetails.isPresent()) {
+			return empDetails;
+		}
+		return Optional.empty();
+	}
+
+	@Override
+	public void deleteEmployeeDetails(Long id) {
+		empDetailsRepo.deletebyEmpId(id);
+	}
 
 	
 	

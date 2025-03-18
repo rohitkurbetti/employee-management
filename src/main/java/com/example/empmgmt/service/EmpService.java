@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.example.empmgmt.dto.EmployeeRequestDto;
+import com.example.empmgmt.entity.EmpDetails;
 import com.example.empmgmt.entity.Employee;
 
 @Service
@@ -21,6 +22,9 @@ public interface EmpService {
 
 	Employee updateEmployee(Long id, EmployeeRequestDto employee);
 	
-	
+	Optional<EmpDetails> getEmployeeDetailById(Long id);
+
+	void deleteEmployeeDetails(Long id);
+
 
 }

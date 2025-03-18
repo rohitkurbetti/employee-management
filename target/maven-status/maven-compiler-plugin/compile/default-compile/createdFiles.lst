@@ -1,9 +1,12 @@
+com\example\empmgmt\repository\EmpRepository.class
+com\example\empmgmt\dto\EmployeeRequestDto.class
+com\example\empmgmt\repository\EmpDetailsRepository.class
 com\example\empmgmt\service\EmpServiceImpl.class
 com\example\empmgmt\config\WebConfig.class
 com\example\empmgmt\entity\Employee.class
 com\example\empmgmt\controller\EmpController.class
-com\example\empmgmt\repository\EmpRepository.class
+com\example\empmgmt\entity\EmpDetails.class
+com\example\empmgmt\entity\SalDetails.class
 com\example\empmgmt\SampleProject1Application.class
 com\example\empmgmt\config\WebConfig$1.class
 com\example\empmgmt\service\EmpService.class
-com\example\empmgmt\dto\EmployeeRequestDto.class

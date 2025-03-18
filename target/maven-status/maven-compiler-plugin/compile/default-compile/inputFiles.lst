@@ -1,7 +1,10 @@
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\config\WebConfig.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\controller\EmpController.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\dto\EmployeeRequestDto.java
+C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\entity\EmpDetails.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\entity\Employee.java
+C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\entity\SalDetails.java
+C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\repository\EmpDetailsRepository.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\repository\EmpRepository.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\SampleProject1Application.java
 C:\Users\rohit\Documents\workspace-spring-tool-suite-4-4.22.1.RELEASE\SampleProject-1\src\main\java\com\example\empmgmt\service\EmpService.java
