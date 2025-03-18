@@ -10,13 +10,13 @@ import lombok.Data;
 @JsonDeserialize
 public class EmployeeRequestDto {
 	
-	private String name;
-	private String designation;
-	private String department;
-	private Long salary;
+	private String empName;
+	private String empDesignation;
+	private String empDepartment;
+	private Long empSalary;
 	private String empAddress1;
 	private String empAddress2;
-	private Long annualIncome;
-	private String state;
+	private Long empAnnualIncome;
+	private String empState;
 
 }

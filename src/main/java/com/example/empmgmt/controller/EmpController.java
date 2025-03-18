@@ -59,7 +59,9 @@ public class EmpController {
 	
     @PutMapping("/employees/{id}")
     public Employee updateEmployee(@PathVariable Long id, @RequestBody EmployeeRequestDto employee) {
-        return empService.updateEmployee(id, employee);
+    	Employee emp = empService.updateEmployee(id, employee);
+    	empService.updateEmployeeDetails(id, employee);
+    	return emp;
     }
     
     
@@ -79,6 +81,10 @@ public class EmpController {
     }
     
     
+    @PutMapping("/employeeDetail/{id}")
+    public EmpDetails updateEmployeeDetails(@PathVariable Long id, @RequestBody EmployeeRequestDto employee) {
+        return empService.updateEmployeeDetails(id, employee);
+    }
     
     
     

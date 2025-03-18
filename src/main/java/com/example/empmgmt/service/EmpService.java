@@ -26,5 +26,7 @@ public interface EmpService {
 
 	void deleteEmployeeDetails(Long id);
 
+	EmpDetails updateEmployeeDetails(Long id, EmployeeRequestDto employee);
+
 
 }

@@ -26,19 +26,19 @@ public class EmpServiceImpl implements EmpService {
 		
 		//save employee
 		Employee empDom = new Employee();
-		empDom.setEmpDesignation(entity.getDesignation());
-		empDom.setEmpName(entity.getName());
-		empDom.setEmpDepartment(entity.getDepartment());
+		empDom.setEmpDesignation(entity.getEmpDesignation());
+		empDom.setEmpName(entity.getEmpName());
+		empDom.setEmpDepartment(entity.getEmpDepartment());
 		Employee empSaved = empRepo.save(empDom);
 		
 		//save empDetails
 		EmpDetails empDetails = new EmpDetails();
 		empDetails.setEmpId(empSaved.getId());
-		empDetails.setEmpSalary(entity.getSalary());
+		empDetails.setEmpSalary(entity.getEmpSalary());
 		empDetails.setEmpAddress1(entity.getEmpAddress1());
 		empDetails.setEmpAddress2(entity.getEmpAddress2());
-		empDetails.setEmpAnnualIncome(entity.getAnnualIncome());
-		empDetails.setEmpState(entity.getState());
+		empDetails.setEmpAnnualIncome(entity.getEmpAnnualIncome());
+		empDetails.setEmpState(entity.getEmpState());
 		
 		empDetailsRepo.save(empDetails);
 		
@@ -65,8 +65,9 @@ public class EmpServiceImpl implements EmpService {
         Employee emp = null;
         if(existingEmployee.isPresent()) {  
         	emp = existingEmployee.get();
-        	emp.setEmpName(employee.getName());
-        	emp.setEmpDesignation(employee.getDesignation());
+        	emp.setEmpName(employee.getEmpName());
+        	emp.setEmpDesignation(employee.getEmpDesignation());
+        	emp.setEmpDepartment(employee.getEmpDepartment());
         } else {
         	emp = new Employee();
         }
@@ -85,6 +86,24 @@ public class EmpServiceImpl implements EmpService {
 	@Override
 	public void deleteEmployeeDetails(Long id) {
 		empDetailsRepo.deletebyEmpId(id);
+	}
+
+	@Override
+	public EmpDetails updateEmployeeDetails(Long id, EmployeeRequestDto employee) {
+		Optional<EmpDetails> existingEmployee = getEmployeeDetailById(id);
+        EmpDetails empDetails = null;
+        if(existingEmployee.isPresent()) {  
+        	empDetails = existingEmployee.get();
+        	empDetails.setEmpAddress1(employee.getEmpAddress1());
+        	empDetails.setEmpAddress2(employee.getEmpAddress2());
+        	empDetails.setEmpAnnualIncome(employee.getEmpAnnualIncome());
+        	empDetails.setEmpSalary(employee.getEmpSalary());
+        	empDetails.setEmpState(employee.getEmpState());
+        	
+        } else {
+        	empDetails = new EmpDetails();
+        }
+        return empDetailsRepo.save(empDetails);
 	}
 
 	
