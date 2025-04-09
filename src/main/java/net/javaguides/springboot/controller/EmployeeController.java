@@ -1,5 +1,6 @@
 package net.javaguides.springboot.controller;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,29 +59,29 @@ public class EmployeeController {
 		return e1;
 	}	
 	
-	// create employee rest api
-	@PostMapping("/employees")
-	@Transactional
-	public Employee createEmployee(@RequestBody Employee employee) {
-		Employee emp =  employeeRepository.save(employee);
-		genericDaoImpl.getGenericDAO("insert into employee_details values (nextval('emp_details_seq'),?,?,?,?,?,?,?) ")
-			.setParameter(1, emp.getId())
-			.setParameter(2, emp.getEmpDesignation())
-			.setParameter(3, emp.getEmpSalary())
-			.setParameter(4, emp.getEmpAddress1())
-			.setParameter(5, emp.getEmpAddress2())
-			.setParameter(6, emp.getEmpAnnualIncome())
-			.setParameter(7, emp.getEmpState())
-			.executeUpdate();
-		genericDaoImpl.getGenericDAO("insert into sal_details values (nextval('sal_details_seq'),?,?,?,?,?) ")
-			.setParameter(1, emp.getId())
-			.setParameter(2, emp.getEmpSalary())
-			.setParameter(3, emp.getEmpTaxslab())
-			.setParameter(4, emp.getEmpPrimaryIncome())
-			.setParameter(5, emp.getEmpTaxableAmount())
-			.executeUpdate();
-		return emp;
-	}
+//	// create employee rest api
+//	@PostMapping("/employees")
+//	@Transactional
+//	public Employee createEmployee(@RequestBody Employee employee) {
+//		Employee emp =  employeeRepository.save(employee);
+//		genericDaoImpl.getGenericDAO("insert into employee_details values (nextval('emp_details_seq'),?,?,?,?,?,?,?) ")
+//			.setParameter(1, emp.getId())
+//			.setParameter(2, emp.getEmpDesignation())
+//			.setParameter(3, emp.getEmpSalary())
+//			.setParameter(4, emp.getEmpAddress1())
+//			.setParameter(5, emp.getEmpAddress2())
+//			.setParameter(6, emp.getEmpAnnualIncome())
+//			.setParameter(7, emp.getEmpState())
+//			.executeUpdate();
+//		genericDaoImpl.getGenericDAO("insert into sal_details values (nextval('sal_details_seq'),?,?,?,?,?) ")
+//			.setParameter(1, emp.getId())
+//			.setParameter(2, emp.getEmpSalary())
+//			.setParameter(3, emp.getEmpTaxslab())
+//			.setParameter(4, emp.getEmpPrimaryIncome())
+//			.setParameter(5, emp.getEmpTaxableAmount())
+//			.executeUpdate();
+//		return emp;
+//	}
 	
 	// get employee by id rest api
 	@GetMapping("/employees/{id}")
@@ -160,6 +161,9 @@ public class EmployeeController {
 		SalDetails salDetails = employeeRepository.getSalDetails(empId);
 		return ResponseEntity.ok(salDetails);
 	}
+	
+	
+	
 	
 	
 	

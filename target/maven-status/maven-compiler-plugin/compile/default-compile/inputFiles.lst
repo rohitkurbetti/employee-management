@@ -2,8 +2,15 @@ C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboo
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\EmpDetails.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\GenericDaoImpl.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\Employee.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\DepartmentRepository.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\SalDetails.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\EmployeeNewRepository.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\controller\EmployeeNewController.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\EmployeeNew.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\GenericDaoRepository.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\Attendance.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\AttendanceRepository.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\controller\EmployeeController.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\SpringbootBackendApplication.java
-C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\SalDetails.java
+C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\model\Department.java
 C:\Users\rohit\Downloads\reactspringboot-emp-mgmt1-backend-master\reactspringboot-emp-mgmt1-backend-master\springboot-backend\src\main\java\net\javaguides\springboot\repository\EmployeeRepository.java
